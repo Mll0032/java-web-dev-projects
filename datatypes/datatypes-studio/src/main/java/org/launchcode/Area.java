@@ -23,7 +23,6 @@ public class Area {
             }
         }
 
-        // Calculate the area and print the result
         double area;
         area = Circle.getArea(radius);
         System.out.println("The area of a circle with radius " + radius + " is " + area);
