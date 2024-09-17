@@ -21,12 +21,20 @@ public class Menu {
         lastUpdated = new Date();
     }
 
-    public void displayMenu() {
+    public void printMenu() {
+        System.out.println("Menu (last updated: " + lastUpdated + ")");
+        for (MenuItem item : items) {
+            System.out.println(item);
+        }
+    }
+
+    public void printMenuItem() {
+        if (value.contains value;)
+        System.out.println("Menu Item" + items);
         for (MenuItem item : items) {
             System.out.println(item);
         }
     }
 }
 
-
-
+//
