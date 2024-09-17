@@ -28,11 +28,11 @@ public class Menu {
         }
     }
 
-    public void printMenuItem() {
-        if (value.contains value;)
-        System.out.println("Menu Item" + items);
-        for (MenuItem item : items) {
+    public void printMenuItem(MenuItem item) {
+        if (this.items.contains(item)){
             System.out.println(item);
+        } else {
+            System.out.println(("Item not found on the menu"));
         }
     }
 }
