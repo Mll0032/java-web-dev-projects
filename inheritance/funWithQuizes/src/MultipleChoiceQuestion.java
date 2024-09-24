@@ -1,24 +1,23 @@
-import java.util.List;
+import java.util.ArrayList;
 
 public class MultipleChoiceQuestion extends Question {
-    private List<String> choices;
+    private ArrayList<String> options;
     private String correctAnswer;
 
-    public MultipleChoiceQuestion(String, questionPrompt, List<String> choices, String correctAnswer) {
-        super(questionPrompt);
-        this.choices = choices;
+    public MultipleChoiceQuestion(String questionText, ArrayList<String> options, String correctAnswer) {
+        super(questionText);
+        this.options = options;
         this.correctAnswer = correctAnswer;
     }
 
-    @Override
-    public void displayQuestion() {
-        System.out.println(getQuestionPrompt());
-        for (int i = 0; i < choices.size(); i++) {
-            System.out.println(i+1) + "." + choices.get(o));
+    public void displayOptions() {
+        for (int i = 0; i < options.size(); i++) {
+            System.out.println((i + 1) + ". " + options.get(i));
         }
     }
 
-    @Override public boolean checkAnswer(String userAnswer){
-        return userAnswer.equalsIgnoreCase(correctAnswer);
+  @Override
+    public boolean checkAnswer(String userAnswer) {
+        return userAnswer.trim().equalsIgnoreCase(correctAnswer);
     }
 }

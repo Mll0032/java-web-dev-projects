@@ -1,30 +1,52 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Quiz {
-    private List<Question> questions;
+    private ArrayList<Question> questions;
+    private int totalQuestions;
+    private int correctAnswers;
 
     public Quiz() {
-        this.questions = new ArrayList<>();
+       questions = new ArrayList<>();
+       totalQuestions = 0;
+       correctAnswers = 0;
     }
 
     public void addQuestion(Question question) {
         questions.add(question);
+        totalQuestions++;
     }
 
     public void runQuiz() {
         Scanner scanner = new Scanner(System.in);
-        int score = 0;
+
+
         for (Question question : questions) {
             question.displayQuestion();
+
+            if (question instanceof MultipleChoiceQuestion) {
+                ((MultipleChoiceQuestion) question).displayOptions();
+            } else if (question instanceof CheckboxQuestion) {
+                ((CheckboxQuestion) question).displayOptions();
+                System.out.println("Select all correct options seperated by commas: ");
+
+            }
+
             System.out.println("Enter your answer: ");
-
             String userAnswer = scanner.nextLine();
+
+            if (question.checkAnswer(userAnswer)) {
+                System.out.println("Correct!");
+                correctAnswers++;
+            } else {
+                System.out.println(("Incorrect!"));
+            }
+            System.out.println();
         }
-
-        System.out.println("You scored: " + score + "/" + questions.size());
-
+        scanner.close();
     }
-}
+        public void gradeQuiz() {
+            System.out.println("You got " + correctAnswers + " out of " + totalQuestions + " correct.");
+        }
+    }
 

@@ -1,15 +1,13 @@
 abstract class Question {
-    private String questionPrompt;
+    private String questionText;
 
-    public Question(String questionPrompt) {
-        this.questionPrompt = questionPrompt;
+    public Question(String questionText) {
+        this.questionText = questionText;
     }
 
-    public String getQuestionPrompt() {
-        return questionPrompt;
+    public void displayQuestion() {
+        System.out.println(questionText);
     }
 
-    public abstract void displayQuestion();
-
-    public abstract boolean checkAnswer(String, userAnwser);
+    public abstract boolean checkAnswer(String userAnwser);
 }
