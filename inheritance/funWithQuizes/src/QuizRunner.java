@@ -14,10 +14,10 @@ public class QuizRunner {
                 "What is the capital of France?", oneOptions, "1");
 
         ArrayList<String> twoOptions = new ArrayList<>();
-        oneOptions.add("Beijing");
-        oneOptions.add("Tokyo");
-        oneOptions.add("Seoul");
-        oneOptions.add("Bangkok");
+        twoOptions.add("Beijing");
+        twoOptions.add("Tokyo");
+        twoOptions.add("Seoul");
+        twoOptions.add("Bangkok");
 
         MultipleChoiceQuestion twoQuestion = new MultipleChoiceQuestion(
                 "What is the capital of Japan?", twoOptions, "2");
