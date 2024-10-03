@@ -76,11 +76,20 @@ public class SkillsController {
             "<body>" +
             "<h1>" + userName + "</h1>" +
             "<h3>Favorite Languages</h3>" +
-            "<ol>" +
-            "<li>" + fave1 + "</li>" +
-            "<li>" + fave2 + "</li>" +
-            "<li>" + fave3 + "</li>" +
-            "</ol>" +
+            "<table border='1'>" +
+            "<tr>" +
+            "<td>1.</td>" +
+            "<td>" + fave1 + "</td>" +
+            "</tr>" +
+            "<tr>" +
+            "<td>2.</td>" +
+            "<td>" + fave2 + "</td>" +
+            "</tr>" +
+            "<tr>" +
+            "<td>3.</td>" +
+            "<td>" + fave3 + "</td>" +
+            "</tr>" +
+            "</table>" +
             "</body>" +
             "</html>";
 
